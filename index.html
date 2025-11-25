@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificación Digital de Escolta</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alineación arriba para evitar centrado vertical excesivo */
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal tipo Tarjeta/Credencial */
+        .id-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            padding: 25px;
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Contenedor de la cabecera (Título y Párrafo principal) */
+        .header-content {
+            margin-bottom: 10px;
+        }
+
+        /* Título Principal */
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 5px 0;
+        }
+
+        /* Subtítulo / Nombre del Escolta */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #004d99; /* Un azul profesional */
+            margin: 0;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        /* Contenedor de la Foto y Datos (Responsive) */
+        .main-info {
+            display: flex;
+            flex-direction: column; /* Mobile first: apilado */
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Media Query para Desktop/Tablet */
+        @media (min-width: 600px) {
+            .id-card {
+                padding: 35px;
+            }
+            .main-info {
+                flex-direction: row; /* Desktop: lado a lado */
+                text-align: left;
+                align-items: flex-start;
+            }
+            .photo-section {
+                flex-shrink: 0;
+                margin-right: 25px;
+            }
+            .data-section {
+                flex-grow: 1;
+                /* Resetear alineación de texto para desktop */
+                text-align: left;
+            }
+        }
+
+        /* Sección de la Foto */
+        .photo-section img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo de la Información */
+        .data-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 12px;
+        }
+
+        .label {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .value {
+            font-size: 1rem;
+            color: #333;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Resaltar Código de Identificación */
+        .value.id-code {
+            font-weight: 700;
+            color: #cc0000; /* Un color de alerta o énfasis */
+            background-color: #ffebeb;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        /* Estilo de Enlaces */
+        a {
+            color: #004d99;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        /* Nota Legal */
+        .legal-note {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.75rem;
+            color: #999;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="id-card">
+
+        <div class="header-content">
+            <h1>Identificación digital de escolta</h1>
+            <h2>ALEJANDRO SANDOVAL NIEVES</h2>
+        </div>
+
+        <div class="main-info">
+
+            <div class="photo-section">
+                <img src="https://i.imgur.com/SH1c2u3.jpg" alt="Foto del Escolta">
+            </div>
+
+            <div class="data-section">
+                
+                <div class="data-item">
+                    <span class="label">Puesto</span>
+                    <span class="value">Escolta particular</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Código de Identificación</span>
+                    <span class="value id-code">SEC-ASN-020590-047-1</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Organización / Empresa</span>
+                    <span class="value">Puentes de Vida A.C. · Seguridad y Logística</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Vigencia</span>
+                    <span class="value">25/11/2025 – 25/11/2026</span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Teléfono de Contacto</span>
+                    <span class="value">
+                        <a href="tel:+522211983184">+52 221 198 3184</a>
+                    </span>
+                </div>
+
+                <div class="data-item">
+                    <span class="label">Correo Electrónico</span>
+                    <span class="value">
+                        <a href="mailto:soynissim@gmail.com">soynissim@gmail.com</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="legal-note">
+            Esta identificación digital corresponde a personal autorizado y es de uso exclusivo para fines de seguridad y logística. En caso de duda sobre la autenticidad, comuníquese directamente con la organización.
+        </div>
+        
+    </div>
+
+</body>
+</html>
